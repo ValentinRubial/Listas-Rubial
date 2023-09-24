@@ -1,0 +1,15 @@
+/* lista-alumnos.component.css */
+.aprobado {
+   color: green;
+   font-weight: bold;
+}
+
+.reprobado {
+   color: red;
+   font-weight: bold;
+}
+
+.form{
+   margin: 10px;
+   font-weight: 600;
+}

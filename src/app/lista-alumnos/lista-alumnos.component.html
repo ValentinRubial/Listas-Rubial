@@ -1,0 +1,25 @@
+<!-- lista-alumnos.component.html -->
+<ul>
+   <li *ngFor="let alumno of alumnos"
+      [ngClass]="{'aprobado': alumno.calificacion >= 60, 'reprobado': alumno.calificacion < 60}">
+      {{ alumno.nombre }} - Edad: {{ alumno.edad }} - Calificación: {{ alumno.calificacion }}
+   </li>
+</ul>
+<!-- lista-alumnos.component.html -->
+<form #alumnoForm="ngForm" (submit)="agregarAlumno(alumnoForm)">
+   <div class="form">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" ngModel required>
+   </div>
+   <div class="form">
+      <label for="edad">Edad:</label>
+      <input type="number" id="edad" name="edad" ngModel required>
+   </div>
+   <div class="form">
+      <label for="calificacion">Calificación:</label>
+      <input type="number" id="calificacion" name="calificacion" ngModel required>
+   </div>
+   <button type="submit">Agregar Alumno</button>
+</form>
+
+
